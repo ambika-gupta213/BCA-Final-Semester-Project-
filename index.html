@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Random Inspirational Web UI System — BCA final year project" />
-  <title>Inspirational Web UI System | BCA Project</title>
+  <meta name="description" content="Inspirational Web UI System — BCA final year project" />
+  <title>Inspirational Web UI System</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="app-header">
     <h1>Inspirational Web UI System</h1>
-    <p class="subtitle">Final Year BCA Project</p>
+    <p class="subtitle">BCA Final Semester Project</p>
   </header>
 
   <main class="container">
@@ -26,7 +26,7 @@
       </div>
 
       <div class="content-area">
-        <p class="quote-text" id="quote-display"></p>
+        <p class="quote-text" id="quote-display">Loading inspirational quote...</p>
         <p class="quote-author" id="author-display"></p>
       </div>
 
@@ -37,8 +37,9 @@
     </article>
   </main>
 
+  <!-- Image_972662.png Box Fixed with Sun/Moon Icon -->
   <div id="chronometer-hub" aria-live="polite">
-    <span aria-hidden="true">&#128337;</span>
+    <span id="time-icon" aria-hidden="true">🕒</span>
     <time id="live-chronometer"></time>
   </div>
 
