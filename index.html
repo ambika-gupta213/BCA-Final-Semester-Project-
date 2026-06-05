@@ -8,34 +8,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="app-header">
     <h1>Quote Generator</h1>
-    <p>Final Year BCA Project</p>
+    <p class="subtitle">Final Year BCA Project</p>
   </header>
 
-  <main class="main-content">
-    <article class="quote-card" aria-labelledby="quote-heading">
+  <main class="container">
+    <article class="quote-card" id="card-element" aria-labelledby="quote-heading">
       <h2 id="quote-heading" class="visually-hidden">Inspirational quote</h2>
 
-      <figure class="quote-figure">
-        <blockquote>
-          <p id="quote-text">Your inspirational quote will appear here.</p>
-        </blockquote>
-        <figcaption>
-          <cite id="quote-author">&mdash; Author Name</cite>
-        </figcaption>
-      </figure>
+      <div class="overlay" aria-hidden="true"></div>
 
-      <div class="btn-container">
-        <button type="button" id="prev-quote" class="btn btn-prev">Previous</button>
-        <button type="button" id="next-quote" class="btn btn-next">Next</button>
+      <div class="utility-actions">
+        <button type="button" id="btn-speak" aria-label="Read quote aloud" title="Read aloud">&#128266;</button>
+        <button type="button" id="btn-copy" aria-label="Copy quote" title="Copy">&#128203;</button>
+        <button type="button" id="btn-share" aria-label="Share link" title="Share">&#8599;</button>
+      </div>
+
+      <div class="content-area">
+        <p class="quote-text" id="quote-display"></p>
+        <p class="quote-author" id="author-display"></p>
+      </div>
+
+      <div class="navigation-matrix">
+        <button type="button" class="nav-btn" id="btn-prev">&larr; Previous</button>
+        <button type="button" class="nav-btn" id="btn-next">Next &rarr;</button>
       </div>
     </article>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> BCA Project. All rights reserved.</p>
-  </footer>
+  <div id="chronometer-hub" aria-live="polite">
+    <span aria-hidden="true">&#128337;</span>
+    <time id="live-chronometer"></time>
+  </div>
 
   <script src="script.js"></script>
 </body>
